@@ -2,7 +2,6 @@
   "name": "stream-array",
   "version": "0.1.0",
   "description": "Pipe an Array through Node.js streams",
-  "main": "index.js",
   "dependencies": {
     "readable-stream": ">= 1.0.0"
   },
@@ -17,21 +16,25 @@
     "type": "git",
     "url": "https://github.com/mimetnet/node-stream-array"
   },
+  "bugs": {
+    "url": "https://github.com/mimetnet/node-stream-array/issues"
+  },
   "keywords": [
     "readable",
     "stream",
     "pipe"
   ],
-  "author": {
-    "name": "Matthew I. Metnetsky",
-    "email": "matthew@cowarthill.com"
-  },
-  "licenses": [
+  "author": "Matthew I. Metnetsky <matthew@cowarthill.com>",
+  "license": [
     {
       "type": "MIT",
       "url": "http://opensource.org/licenses/MIT"
     }
   ],
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "engines": [
     "node >= 0.8.0"
   ]
