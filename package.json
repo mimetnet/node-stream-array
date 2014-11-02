@@ -1,6 +1,6 @@
 {
   "name": "stream-array",
-  "version": "0.1.3",
+  "version": "1.0.0-beta",
   "description": "Pipe an Array through Node.js streams",
   "dependencies": {
     "readable-stream": "~1.1.0",
