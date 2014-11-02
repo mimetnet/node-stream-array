@@ -4,6 +4,17 @@ var tap = require('tap')
     , concat = require('concat-stream')
 ;
 
+test('empty array', function(t) {
+    var s = streamify([]);
+
+    s.pipe(concat({encoding: 'object'}, function(res) {
+        t.equal(1, arguments.length, 'concat returns 1 arg');
+        t.equal(0, res.length, 'result is an empty list');
+        t.deepEqual([], res, 'result matches expectation');
+        t.end();
+    }));
+});
+
 test('array of strings', function(t) {
     var s = streamify(['1', '2', '3', 'Four']);
 

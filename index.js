@@ -22,7 +22,7 @@ function StreamArray(list) {
 StreamArray.prototype = Object.create(Readable.prototype, {constructor: {value: StreamArray}});
 
 StreamArray.prototype._read = function(size) {
-    this.push(this._queue.shift());
+    this.push(this._queue.length ? this._queue.shift() : null);
 };
 
 module.exports = function(list) {
