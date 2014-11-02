@@ -3,7 +3,7 @@
 Pipe an Array through Node.js streams. This is rather useful for testing other
 streams.
 
-[![build status][1]][2] [![npm version][3]][4] [![dependencies][5]][6]
+[![build status][1]][2] [![npm version][3]][4] [![dependencies][5]][6] [![devDependencies][7]][8]
 
 
 ## Usage
@@ -35,4 +35,6 @@ npm install stream-array
   [4]: https://badge.fury.io/js/stream-array
   [5]: https://david-dm.org/mimetnet/node-stream-array.png
   [6]: https://david-dm.org/mimetnet/node-stream-array
+  [7]: https://david-dm.org/mimetnet/node-stream-array/dev-status.png?#info=devDependencies
+  [8]: https://david-dm.org/mimetnet/node-stream-array/#info=devDependencies
 
