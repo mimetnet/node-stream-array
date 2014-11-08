@@ -7,11 +7,11 @@
     "fastqueue": "~0.1.0"
   },
   "devDependencies": {
-    "tap": "~0.4.0",
+    "tape": "^3.0.0",
     "concat-stream": "~1.4.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/tap ./test/"
+    "test": "./node_modules/.bin/tape ./test/"
   },
   "repository": {
     "type": "git",
