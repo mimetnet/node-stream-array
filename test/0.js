@@ -1,4 +1,4 @@
-var test = require('tap').test
+var test = require('tape')
     , Queue = require('fastqueue')
 ;
 
@@ -6,17 +6,17 @@ var test = require('tap').test
  * We're using some internals so lets make sure they're not different
  * than when we wrote this.
  */
-test('require', function(t) {
+test('fastqueue', function(t) {
     var q;
 
     t.ok(Queue, 'fastqueue exists');
-    t.type(Queue, 'function', 'require returns an object');
+    t.equal(typeof(Queue), 'function', 'require returns an object');
     t.equal(0, Object.keys(Queue).length, 'No hidden exports');
 
     q = new Queue();
 
-    t.type(q, 'object', 'new Queue() returns an object');
-    t.type(q.length, 'number', 'q.length');
+    t.equal(typeof(q), 'object', 'new Queue() returns an object');
+    t.equal(typeof(q.length), 'number', 'q.length');
 
     t.ok(Array.isArray(q.head), 'q.head = []');
     t.ok(Array.isArray(q.tail), 'q.tail = []');

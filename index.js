@@ -1,14 +1,8 @@
-var Readable = require('stream').Readable
+var Readable = require('readable-stream').Readable
     , Queue = require('fastqueue')
 ;
 
-if (!Readable) {
-    Readable = require('readable-stream/readable');
-}
-
 function StreamArray(list) {
-    if (!(this instanceof(StreamArray)))
-        return new StreamArray(list);
     if (!Array.isArray(list))
         throw new TypeError('First argument must be an Array');
 

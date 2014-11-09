@@ -1,5 +1,4 @@
-var tap = require('tap')
-    , test = tap.test
+var test = require('tape')
     , streamify = require('..')
     , concat = require('concat-stream')
 ;

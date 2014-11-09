@@ -1,17 +1,18 @@
 {
   "name": "stream-array",
-  "version": "1.0.0",
+  "version": "1.0.1-beta",
   "description": "Pipe an Array through Node.js streams",
   "dependencies": {
     "readable-stream": "~1.1.0",
     "fastqueue": "~0.1.0"
   },
   "devDependencies": {
-    "tap": "~0.4.0",
-    "concat-stream": "~1.4.0"
+    "concat-stream": "~1.4.6",
+    "tape": "~3.0.2"
   },
   "scripts": {
-    "test": "./node_modules/.bin/tap ./test/"
+    "test": "./node_modules/.bin/tape ./test/*",
+    "coverage": "covert ./test/*"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "url": "https://github.com/mimetnet/node-stream-array/issues"
   },
   "keywords": [
+    "array",
     "readable",
     "stream",
     "pipe"
@@ -35,6 +37,24 @@
   "main": "index.js",
   "directories": {
     "test": "test"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/3.5",
+      "firefox/latest",
+      "firefox/nightly",
+      "chrome/10",
+      "chrome/latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
   },
   "engines": [
     "node >= 0.8.0"
