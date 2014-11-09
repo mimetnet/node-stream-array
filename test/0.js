@@ -6,7 +6,7 @@ var test = require('tape')
  * We're using some internals so lets make sure they're not different
  * than when we wrote this.
  */
-test('require', function(t) {
+test('fastqueue', function(t) {
     var q;
 
     t.ok(Queue, 'fastqueue exists');
