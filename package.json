@@ -11,7 +11,7 @@
     "concat-stream": "~1.4.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/tape ./test/"
+    "test": "./node_modules/.bin/tape ./test/*",
   },
   "repository": {
     "type": "git",
