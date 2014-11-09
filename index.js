@@ -3,8 +3,6 @@ var Readable = require('readable-stream').Readable
 ;
 
 function StreamArray(list) {
-    if (!(this instanceof(StreamArray)))
-        return new StreamArray(list);
     if (!Array.isArray(list))
         throw new TypeError('First argument must be an Array');
 
