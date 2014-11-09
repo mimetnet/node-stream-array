@@ -5,6 +5,8 @@ streams.
 
 [![npm version][1]][2] [![build status][3]][4] [![dependencies][5]][6] [![devDependencies][7]][8]
 
+ [![testling][9]][10]
+
 
 ## Usage
 
@@ -37,4 +39,6 @@ npm install stream-array
   [6]: https://david-dm.org/mimetnet/node-stream-array
   [7]: https://david-dm.org/mimetnet/node-stream-array/dev-status.svg?#info=devDependencies
   [8]: https://david-dm.org/mimetnet/node-stream-array/#info=devDependencies
+  [9]: https://ci.testling.com/mimetnet/node-stream-array.png
+  [10]: https://ci.testling.com/mimetnet/node-stream-array
 
