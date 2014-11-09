@@ -21,6 +21,7 @@
     "url": "https://github.com/mimetnet/node-stream-array/issues"
   },
   "keywords": [
+    "array",
     "readable",
     "stream",
     "pipe"
