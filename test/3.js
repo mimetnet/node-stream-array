@@ -5,11 +5,23 @@ var test = require('tape')
 test('ctor', function(t) {
     t.throws(function() {
         streamify();
-    }, {name:'TypeError', message:'First argument must be an Array'}, 'Throws TypeError');
+    }, 'throws: no argument');
 
-    t.doesNotThrow(function() {
-        streamify([]);
-    }, 'Valid argument');
+    [null, undefined, 1, 'string', new Object(), function(){}].forEach(
+        function(item) {
+            t.throws(function() {
+                streamify(item);
+            }, 'throws: ' + (!item? 'null/undefined' : item.toString()));
+        }
+    );
+
+    [[], [1], [1,2], ['1', '2'], [new Buffer('asdf')]].forEach(
+        function(item) {
+            t.doesNotThrow(function() {
+                streamify(item);
+            }, 'accepts: ' + item.toString());
+        }
+    );
 
     t.end();
 });
