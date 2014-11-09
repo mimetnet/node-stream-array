@@ -13,7 +13,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/tape ./test/*",
-    "coverage": "./node_modules/.bin/covert ./test/*"
+    "coverage": "covert ./test/*"
   },
   "repository": {
     "type": "git",
