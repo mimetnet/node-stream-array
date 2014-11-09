@@ -21,9 +21,27 @@ streamify(['1', '2', '3', os.EOL]).pipe(process.stdout);
 ## API
 
 #### streamify(Array)
-Provide an Array to streamify which will be iterated over. Each element will
-dequeued and pushed into the following piped stream.
+The result of [require][13] is a 'function' that when invoked, will return a [Readable][11] [Stream][12].
 
+```
+var streamify = require('stream-array');
+```
+
+The Array passed into stream-array() can contain any type, as it assumes the receiving stream can handle it. Each element will be dequeued and pushed into the following piped stream.
+
+```
+var readable = streamify(['Hello', new Buffer('World')]);
+```
+
+This [Stream][12] will emit each element of the source array as chunks.
+
+```
+readable(['1', '2', '3', os.EOL]).pipe(process.stdout);
+```
+
+```
+123\n
+```
 
 ## Install
 
@@ -41,4 +59,10 @@ npm install stream-array
   [8]: https://david-dm.org/mimetnet/node-stream-array/#info=devDependencies
   [9]: https://ci.testling.com/mimetnet/node-stream-array.png
   [10]: https://ci.testling.com/mimetnet/node-stream-array
+  [11]: http://nodejs.org/api/stream.html#stream_class_stream_readable
+  [12]: http://nodejs.org/api/stream.html#stream_stream
+  [13]: http://nodejs.org/api/globals.html#globals_require
 
+## License
+
+[MIT License](https://github.com/mimetnet/node-stream-array/blob/master/LICENSE)
