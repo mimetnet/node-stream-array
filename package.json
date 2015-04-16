@@ -7,8 +7,8 @@
     "fastqueue": "~0.1.0"
   },
   "devDependencies": {
-    "concat-stream": "~1.4.7",
-    "tape": "~3.5.0"
+    "concat-stream": "~1.4.8",
+    "tape": "~4.0.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/tape ./test/*",
