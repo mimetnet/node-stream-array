@@ -1,9 +1,12 @@
 # stream-array
 
-Pipe an Array through Node.js streams. This is rather useful for testing other
-streams.
+Pipe an Array through Node.js [Streams][12]. This is rather useful for testing
+other streams.
 
-[![npm version][1]][2] [![build status][3]][4] [![dependencies][5]][6] [![devDependencies][7]][8]
+[![npm version][1]][2]
+[![build status][3]][4]
+[![dependencies][5]][6]
+[![devDependencies][7]][8]
 
 [//]: [![testling][9]][10]
 
@@ -21,7 +24,8 @@ streamify(['1', '2', '3', os.EOL]).pipe(process.stdout);
 ## API
 
 #### streamify(Array)
-The result of [require][13] is a 'function' that when invoked, will return a [Readable][11] [Stream][12].
+The result of [require][13] is a 'function()' that when invoked, will return a
+[Readable][11] [Stream][12].
 
 ```
 var streamify = require('stream-array');
@@ -35,7 +39,8 @@ stream can handle it. Each element in the array will be [pushed][14] into the
 var readable = streamify(['Hello', new Buffer('World')]);
 ```
 
-This [Stream][12] will emit each element of the source array as chunks.
+This [Stream][12] will [push][14] each element of the source array into the
+[piped][15] array.
 
 ```
 readable(['1', '2', '3', os.EOL]).pipe(process.stdout);
@@ -47,7 +52,7 @@ readable(['1', '2', '3', os.EOL]).pipe(process.stdout);
 
 ## Install
 
-```
+```sh
 npm install stream-array
 ```
 
