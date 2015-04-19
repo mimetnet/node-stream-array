@@ -1,5 +1,4 @@
 var Readable = require('readable-stream').Readable
-    , Queue = require('fastqueue')
 ;
 
 function StreamArray(list) {
@@ -8,15 +7,15 @@ function StreamArray(list) {
 
     Readable.call(this, {objectMode:true});
 
-    this._queue = new Queue();
-    this._queue.tail = list;
-    this._queue.length = list.length;
+    this._i = 0;
+    this._l = list.length;
+    this._list = list;
 }
 
 StreamArray.prototype = Object.create(Readable.prototype, {constructor: {value: StreamArray}});
 
 StreamArray.prototype._read = function(size) {
-    this.push(this._queue.length ? this._queue.shift() : null);
+    this.push(this._i < this._l ? this._list[this._i++] : null);
 };
 
 module.exports = function(list) {

@@ -7,7 +7,7 @@ test('ctor', function(t) {
         streamify();
     }, 'throws: no argument');
 
-    [null, undefined, 1, 'string', new Object(), function(){}].forEach(
+    [null, undefined, 1, NaN, 'string', new Object(), function(){}].forEach(
         function(item) {
             t.throws(function() {
                 streamify(item);
