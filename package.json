@@ -3,8 +3,7 @@
   "version": "1.0.2",
   "description": "Pipe an Array through Node.js streams",
   "dependencies": {
-    "readable-stream": "~1.1.0",
-    "fastqueue": "~0.1.0"
+    "readable-stream": "~1.1.0"
   },
   "devDependencies": {
     "concat-stream": "~1.4.8",
