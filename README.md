@@ -27,7 +27,9 @@ The result of [require][13] is a 'function' that when invoked, will return a [Re
 var streamify = require('stream-array');
 ```
 
-The Array passed into stream-array() can contain any type, as it assumes the receiving stream can handle it. Each element will be dequeued and pushed into the following piped stream.
+The source array can contain any type as it is assumed that the receiving
+stream can handle it. Each element in the array will be [pushed][14] into the
+[piped][15] stream, **without** modifying the source array.
 
 ```
 var readable = streamify(['Hello', new Buffer('World')]);
@@ -62,6 +64,8 @@ npm install stream-array
   [11]: http://nodejs.org/api/stream.html#stream_class_stream_readable
   [12]: http://nodejs.org/api/stream.html#stream_stream
   [13]: http://nodejs.org/api/globals.html#globals_require
+  [14]: https://nodejs.org/api/stream.html#stream_readable_push_chunk_encoding
+  [15]: https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options
 
 ## License
 
