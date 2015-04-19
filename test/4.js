@@ -7,9 +7,9 @@ test('immutable', function(t) {
     var s, a = [1, 2, 3, 4, 5];
 
     if (Object && 'function' === typeof(Object.observe)) {
-        Object.observe(a, function (changes) {
-            t.fail('input array has been modified');
-        });
+        // will produce ugly error, but also doesn't
+        // cause `covert` to detect an untested line
+        Object.observe(a, t.fail);
     }
 
     s = streamify(a);
