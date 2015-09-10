@@ -12,11 +12,11 @@ test('async, non-blocking', function(t) {
     });
 
     process.nextTick(function() {
-      t.ok(i === 0 || i === 1, 'should have emitted one item at most in the first tick');
+      t.equal(0, i, 'should emit the first item after this code');
       process.nextTick(function() {
-        t.ok(i === 1 || i === 2, 'should have emitted one or two items in the second tick');
+        t.equal(1, i, 'should emit the second item after this code');
         process.nextTick(function() {
-          t.ok(i === 2 || i === 3, 'should have emitted two or three items in the thrid tick');
+          t.equal(2, i, 'should emit the third item after this code');
           process.nextTick(function() {
             t.equal(3, i, 'should have emitted all three items in the fourth tick');
             t.end();
