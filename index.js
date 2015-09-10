@@ -15,7 +15,10 @@ function StreamArray(list) {
 StreamArray.prototype = Object.create(Readable.prototype, {constructor: {value: StreamArray}});
 
 StreamArray.prototype._read = function(size) {
-    this.push(this._i < this._l ? this._list[this._i++] : null);
+    var self = this;
+    process.nextTick(function() {
+        self.push(self._i < self._l ? self._list[self._i++] : null);
+    });
 };
 
 module.exports = function(list) {
