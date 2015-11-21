@@ -20,6 +20,7 @@
   "bugs": {
     "url": "https://github.com/mimetnet/node-stream-array/issues"
   },
+  "homepage": "https://github.com/mimetnet/node-stream-array",
   "keywords": [
     "array",
     "readable",
@@ -27,12 +28,7 @@
     "pipe"
   ],
   "author": "Matthew I. Metnetsky <matthew@cowarthill.com>",
-  "license": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
+  "license": "MIT",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -55,7 +51,7 @@
       "android-browser/4.2..latest"
     ]
   },
-  "engines": [
-    "node >= 0.8.0"
-  ]
+  "engines": {
+    "node" : ">= 0.8"
+  }
 }
