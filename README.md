@@ -28,7 +28,7 @@ streamify(['1', '2', '3', os.EOL]).pipe(process.stdout);
 The result of [require][13] is a 'function()' that when invoked, will return a
 [Readable][11] [Stream][12].
 
-```
+```js
 var streamify = require('stream-array');
 ```
 
@@ -36,14 +36,14 @@ The source array can contain any type as it is assumed that the receiving
 stream can handle it. Each element in the array will be [pushed][14] into the
 [piped][15] stream, **without** modifying the source array.
 
-```
+```js
 var readable = streamify(['Hello', new Buffer('World')]);
 ```
 
 This [Stream][12] will [push][14] each element of the source array into the
 [piped][15] array.
 
-```
+```js
 readable(['1', '2', '3', os.EOL]).pipe(process.stdout);
 ```
 
