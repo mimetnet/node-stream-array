@@ -1,5 +1,7 @@
 # stream-array
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mimetnet/node-stream-array.svg)](https://greenkeeper.io/)
+
 Pipe an Array through Node.js [Streams][12]. This is rather useful for testing
 other streams.
 
